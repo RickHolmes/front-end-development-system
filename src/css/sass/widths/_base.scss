@@ -1,0 +1,24 @@
+// the mobile-first stuff and anything you want to cascade
+html {
+	font-size: 62.5%; // set "rem" at about 10px
+}
+
+body {
+	font-size: 1.4rem;
+	line-height: 1.2;
+}
+
+
+.container {
+	max-width: 98rem;
+	margin: 0 auto;
+	padding: 0 2rem;	
+}
+
+h1.section-title {
+	font-size: 2.4rem;
+}
+
+h1.article-title {
+	font-size: 2rem;
+}

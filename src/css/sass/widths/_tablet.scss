@@ -1,0 +1,17 @@
+// _tablet.scss
+
+@media (min-width: 768px) {
+	
+	section.articles {
+		
+		article:nth-child(2n+1) {
+			padding-right: 1rem;
+		}
+		article:nth-child(2n+0) {
+			padding-left: 1rem;
+		}
+	}
+			
+	
+	
+}

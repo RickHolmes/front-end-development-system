@@ -1,0 +1,194 @@
+
+/*************************************************************************
+ *			pure-extensions.css -- things that pure lacks
+ *************************************************************************/
+/* SOME USEFUL GENERIC CLASSES NOT IN PURE, copied from bootstrap 3.0 */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.hide, .hidden {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/* list styles, from Bootstrap 3.0 */
+.unstyled {
+  list-style: none;
+}
+
+.unstyled.flush {
+  padding-left: 0;
+}
+
+.inline {
+  list-style: none;
+  display: inline;
+}
+
+/* make pure grid units border-box so they can have padding for gutters */
+.pure-g-r [class*="pure-u"], .pure-g-r [class*="pure-u"] *, .pure-g [class*="pure-u"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* class to undo above if needed */
+.pure-content-box {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* button mods, from pull request(s) */
+.pure-button {
+  font-family: inherit;
+}
+
+.pure-button-rounded {
+  /* border-radius: 2em; */
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  border-radius: 2em;
+}
+
+.pure-form .pure-label-hidden {
+  display: none;
+}
+
+.pure-form .pure-label-hidden > input {
+  display: inline-block;
+}
+
+.pure-menu.pure-menu-horizontal > ul {
+  height: auto;
+  /* reset pure's value */
+  top: auto;
+  /* reset pure's value */
+  min-height: 2.4em;
+  bottom: 0;
+}
+
+/* the nav link, controlled by js */
+menu-open-link {
+  -moz-transition: all, 0.2s, ease-out 1s;
+  -o-transition: all, 0.2s, ease-out 1s;
+  -webkit-transition: all, 0.2s, ease-out 1s;
+  transition: all 0.2s ease-out 1s;
+}
+
+.menu-open-link {
+  display: none;
+  /* this will show only on small screens */
+  top: 0;
+  left: 150px;
+  /* "#menu width" */
+  font-size: 10px;
+  /* change this value to increase/decrease button size */
+  z-index: 10;
+  width: 2em !important;
+  height: auto;
+  padding: 2.1em 1.6em;
+  float: right;
+}
+
+.menu-open-link:hover,
+.menu-open-link:focus {
+  outline: none;
+  background-color: transparent !important;
+}
+
+.menu-open-link span {
+  position: relative;
+  display: block;
+}
+
+.menu-open-link span,
+.menu-open-link span:before,
+.menu-open-link span:after {
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: .2em;
+  -moz-transition: all, 0.8s 1s;
+  -o-transition: all, 0.8s 1s;
+  -webkit-transition: all, 0.8s 1s;
+  transition: all 0.8s 1s;
+}
+
+.menu-open-link span:before,
+.menu-open-link span:after {
+  position: absolute;
+  margin-top: -.6em;
+  content: " ";
+}
+
+.menu-open-link span:after {
+  margin-top: .6em;
+}
+
+.menu-open-link.active span {
+  background: transparent;
+}
+
+.menu-open-link.active span:before {
+  -webkit-transform: rotate(45deg) translate(0.5em, 0.4em);
+  -moz-transform: rotate(45deg) translate(0.5em, 0.4em);
+  -ms-transform: rotate(45deg) translate(0.5em, 0.4em);
+  -o-transform: rotate(45deg) translate(0.5em, 0.4em);
+  transform: rotate(45deg) translate(0.5em, 0.4em);
+}
+
+.menu-open-link.active span:after {
+  -webkit-transform: rotate(-45deg) translate(0.45em, -0.35em);
+  -moz-transform: rotate(-45deg) translate(0.45em, -0.35em);
+  -ms-transform: rotate(-45deg) translate(0.45em, -0.35em);
+  -o-transform: rotate(-45deg) translate(0.45em, -0.35em);
+  transform: rotate(-45deg) translate(0.45em, -0.35em);
+}
+
+/* Android browser bug */
+.pure-u-1-4 {
+  width: 24.9999%;
+}

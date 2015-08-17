@@ -1,0 +1,8 @@
+/* sass mixins */
+@mixin important($compass_mixin, $value) {
+	@if $compass_mixin == "box-sizing" {
+		-webkit-box-sizing: unquote($value) !important;
+		-mox-box-sizing: unquote($value) !important;
+		box-sizing: unquote($value) !important;
+	}
+}

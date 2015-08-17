@@ -1,0 +1,20 @@
+// _desktop.scss
+
+@media (min-width: 980px) {
+	.container {
+		padding: 0;
+	}
+
+	section.articles {
+		
+		.pure-u-md-1-2:nth-child(2n+1) {
+			padding-right: 2rem;
+		}
+		.pure-u-md-1-2:nth-child(2n+0) {
+			padding-left: 2rem;
+		}
+		
+
+	}
+		
+}

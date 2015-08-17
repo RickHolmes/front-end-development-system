@@ -1,0 +1,1 @@
+define((("__proto__" in {}&&!!(document.createElement("canvas").getContext&&document.createElement("canvas").getContext("2d")))?["zepto"]:["jquery"]),function($){return window.$});

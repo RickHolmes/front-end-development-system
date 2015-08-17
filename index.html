@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Development Demonstration</title>
+	<link rel="stylesheet" href="assets/css/app.min.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+	<script src="src/js/vendor/jquery-1.10.2.min.js"></script>
+	<script>
+		// this is bootstrapped data supplied by cms, etc.
+		var bootstrappedData = [
+			{
+				"name": "Google",
+				"href": "https://www.google.com/"
+			},
+			{
+				"name": "Yahoo",
+				"href": "https://www.yahoo.com/"
+			},
+			{
+				"name": "Bing",
+				"href": "https://www.bing.com/"
+			},
+			{
+				"name": "DuckDuckGo",
+				"href": "https://duckduckgo.com/"
+			}
+		];
+	</script>
+</head>
+<body>
+	<header>
+		<nav id="mainnav">
+			<div class="container pure-menu pure-menu-horizontal" id="nav-container">this will be replaced by a dynamic menu</div>
+		</nav>
+	</header>
+	<section id="maincontent" class="container pure-g">
+		<article class="pure-u-1 pure-u-md-1">
+			<p>Below is a simple responsive grid. Above is a navigation menu created dynamically with Backbone.Marionette with data coming from a bootstrapped JavaScript object. The final css and JavaScript are created by a Grunt script that combines/compiles and minimizes the development files.</p>
+		</article>
+		<section class="articles pure-g">
+			<article class="pure-u-1 pure-u-md-1-2">
+				<h1 class="article-title">Article 1</h1>			
+				<p>Lorem ipsum dolor sit amet consectetuer tincidunt augue ullamcorper tortor vel. Orci tempus id risus laoreet Cum amet Nam at sed Lorem. Morbi velit nascetur orci at eu semper congue quis velit Nam. Morbi pellentesque sit elit sed ridiculus auctor rhoncus leo a nibh. Condimentum sed Nullam laoreet id lacinia.</p>
+			</article>
+			<article class="pure-u-1 pure-u-md-1-2">
+				<h1 class="article-title">Article 2</h1>			
+				<p>Li Europan lingues es membres del plu continuar separat usa solmen. Traductores differe li on es in myth paroles nov necessi commun. Necessi It Por familie necessi plu del etc. grammatica uniform li. Scientie nov nov sport Li solmen pronunciation refusa Europa etc. lingues. Esser tot plu Lor Europa refusa familie li membres in grammatica. Far li Li usa es usa un li desirabilit continuar li. Por.</p>
+			</article>
+		</section>
+	</section>
+	<footer>
+	
+	</footer>		
+	<!-- <script src="assets/js/app-min.js"></script> -->
+	<script src="src/js/vendor/require.js" data-main="src/js/main.js"></script>
+</body>
+</html>

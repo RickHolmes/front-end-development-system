@@ -1,0 +1,40 @@
+/**
+ * the main scss file 
+ * the file imports any of the components needed for the final css
+ * it uses the PureCss framework by default, but also may use Bootstrap components
+ * Compass mixins are also included, though not the framework itself
+ * For ease in responsive development, any @media widths are separated into their own files
+ */
+
+// import pure
+@import "vendor/pure/base-min.scss";
+@import "vendor/pure/grids-min.scss";
+@import "vendor/pure/grids-responsive-min.scss"; // IE > 8 only
+//@import "vendor/pure/forms-min.scss";
+//@import "vendor/pure/buttons-min.scss";
+@import "vendor/pure/menus-min.scss";
+
+// pure extensions -- things that pure "should" have, but does not
+@import "partials/_pure-extensions.scss";
+
+// Bootstrap components needed, see /src/css/sass/vendor/bootstrap for what is available
+//@import "vendor/bootstrap/variables";
+//@import "vendor/bootstrap/mixins";
+//@import "vendor/bootstrap/navs.scss";
+//@import "vendor/bootstrap/progress-bars.scss";
+//@import "vendor/bootstrap/utilities.scss";
+
+// mixins & variables
+@import "_mixins.scss";
+@import "partials/_variables.scss";
+@import "_compass.scss";
+
+// the cms theme
+//@import "partials/_theme.scss"; // anything you might need from a wordpress/whatever theme file for development outside of the cms
+
+// the app/page itself
+@import "widths/_base.scss";
+@import "widths/_phone.scss";
+@import "widths/_tablet.scss";
+@import "widths/_desktop.scss";
+@import "widths/_design.scss"; 
