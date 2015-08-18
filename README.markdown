@@ -20,5 +20,4 @@ All final front-end assets live in the /assets directory which contains the css,
 
 ## Installation Requirements for this Repository
 Should you wish, you may clone or download this repository and install it on your desktop computer or server. You will need to have Node.js (with npm) and Grunt-cli installed. Navigate to the "develop" directory and, on the command line, type `npm init`. The defaults are fine. Then type `npm install` to install all grunt , grunt-sass and grunt-contrib-watch.
-```
-If you are installing the Marionette branch, type `npm install`. Then `grunt` will start the "watcher" and re-compile any changes you make to any of the .scss files (and .js files for the Marionette branch). If you have made changes before running grunt, type "grunt compile".
+
