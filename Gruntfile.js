@@ -37,18 +37,6 @@ module.exports = function(grunt) { // the general grunt function that is run
 			}
 		}, 
 		
-		// look for changes in either the Sass/css files or any of the js or template files
-		watch: { // watch task for general work
-			sass: {
-				files: ['src/css/sass/**/*.scss'],
-				tasks: ['sass']
-			},
-			requirejs: {
-				files: ['src/js/**/*.js', 'src/js/**/*.tpl'],
-				tasks: ['requirejs']
-			}
-		},
-		
 		// copy our finished files elsewhere so all this develop stuff can remain outside the rest of the project
 		copy: {
 			css: {
@@ -68,6 +56,20 @@ module.exports = function(grunt) { // the general grunt function that is run
 				]
 			}
 		}
+		
+		// look for changes in either the Sass/css files or any of the js or template files
+		watch: { // watch task for general work
+			sass: {
+				files: ['src/css/sass/**/*.scss']
+				tasks: ['sass'] // add copy:css if desired
+			},
+			requirejs: {
+				files: ['src/js/**/*.js', 'src/js/**/*.tpl'],
+				tasks: ['requirejs'] // add copy:js if desired
+			}
+		},
+		
+		
 	});
 	
 	// all the plugins that is needed for above tasks
@@ -85,12 +87,5 @@ module.exports = function(grunt) { // the general grunt function that is run
 	// or the js
 	grunt.registerTask('compilejs', 'requirejs');
 	
-	// OR use the below if copying final assets file(s) to an additional location
-	//grunt.registerTask('default', ['watch', 'copy:css', 'copy:js']);
-	// compile everything "manually", useful if you forgot to start by "watching" ;-)
-	//grunt.registerTask('compile', ['sass', 'requirejs', 'copy:css', 'copy:js']);
-	// just the css
-	//grunt.registerTask('compilecss', ['sass', 'copy:css']);
-	// or the js
-	//grunt.registerTask('compilejs', 'requirejs', 'copy:js');	
+
 };
