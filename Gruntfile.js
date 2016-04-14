@@ -55,12 +55,12 @@ module.exports = function(grunt) { // the general grunt function that is run
 					}
 				]
 			}
-		}
+		},
 		
 		// look for changes in either the Sass/css files or any of the js or template files
 		watch: { // watch task for general work
 			sass: {
-				files: ['src/css/sass/**/*.scss']
+				files: ['src/css/sass/**/*.scss'],
 				tasks: ['sass'] // add copy:css if desired
 			},
 			requirejs: {
